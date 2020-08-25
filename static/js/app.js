@@ -1,3 +1,98 @@
+function init() {
+
+    //init trace bar chart
+    var trace1 = {
+        y: ["OTU 10", "OTU 9","OTU 8","OTU 7","OTU 6","OTU 5","OTU 4","OTU 3","OTU 2","OTU 1"],
+        x: [10, 25, 50, 75, 90, 100, 115, 125, 135, 150],
+        type: "bar",
+        orientation: "h"
+      };
+
+    //data for bar chart
+    var chartData = [trace1];
+
+    //layout for bar chart
+    var barLayout = {
+        width: 500,
+        height: 500,
+        title: {
+            text: "Top 10 OTUs",
+            font: {size: 24}
+        }};
+       
+    //render bar chart
+    Plotly.newPlot("bar", chartData, barLayout);
+
+    //init trace bubble chart
+    var desired_max_marker_size = 70;
+    var size = [10, 25, 50, 75, 90, 100, 115, 125, 135, 150];
+
+    var trace2 = {
+        x: ["OTU 10", "OTU 9","OTU 8","OTU 7","OTU 6","OTU 5","OTU 4","OTU 3","OTU 2","OTU 1"],
+        y: [10, 25, 50, 75, 90, 100, 115, 125, 135, 150],
+        mode: 'markers',
+        marker: {
+            size: size,
+            sizeref: 2.0 * Math.max(...size) / (desired_max_marker_size**2),
+            sizemode: 'area',
+            color: [10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
+            colorscale: 'Portland'
+        }
+    };
+
+    //layout for bubble chart
+    var bubbleLayout = {
+        xaxis: { title: "OTU ID"}
+    };
+
+    //data for bubble chart
+    var plotData = [trace2];
+
+    //render bubble chart
+    Plotly.newPlot("bubble", plotData, bubbleLayout);
+
+//gauge chart
+    //data for gauge chart
+    var gaugeData = [
+        {
+            domain: { x: [0,1], y: [0,1]},
+            value: 2,
+            title: { text: "Scrubs per Week"},
+            type: "indicator",
+            mode: "gauge+number",
+            gauge: {
+                axis: { range: [0, 9], ticks: ""},
+                bar: { color: "black" },
+                steps: [
+                    { range: [0, 1], color: "#ff9b9d" },
+                    { range: [1, 2], color: "#ff9b9d" },
+                    { range: [2, 3], color: "#ff9b9d" },
+                    { range: [3, 4], color: "lightgray" },
+                    { range: [4, 5], color: "lightgray" },
+                    { range: [5, 6], color: "lightgray" },
+                    { range: [6, 7], color: "#8ae28a" },
+                    { range: [7, 8], color: "#8ae28a" },
+                    { range: [8, 9], color: "#8ae28a" }
+                ]
+            }
+        }
+    ];
+
+    //layout for gauge chart
+    var gaugeLayout = {
+        width: 500,
+        height: 400,
+        title: {
+            text: "Belly Button Washing Frequency",
+            font: {size: 24}
+        }
+    }
+
+    //render gauge chart
+    Plotly.newPlot("gauge", gaugeData, gaugeLayout);
+
+}
+
 //insert all sample ids into drop down menu
 function insertMenu() {
 
@@ -8,8 +103,6 @@ function insertMenu() {
         var nameArray = data.names;
         //console.log(nameArray);
     
-    
-        //var elmnts = ["940", "941", "1601"];
         var elmnts = nameArray;
         var select = document.getElementById("selDataset");
 
@@ -151,7 +244,6 @@ function getValue(option) {
     var trace1 = {
       y: yValues,
       x: slicedData.map(row => row.sampleValue),
-      //x: [163, 126, 113, 78, 71],
       text: slicedData.map(row => row.otuLabel),
       type: "bar",
       orientation: "h"
@@ -257,3 +349,5 @@ function getValue(option) {
 
   })
 }    
+
+init();
