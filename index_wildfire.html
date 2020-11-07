@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wildfires</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="WF_styles.css">
+    
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <div class="container-fluid">
+
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+            <span class="navbar-brand mb-0 h4">US Wildfires</span> 
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>   
+
+            <div class="collapse navbar-collapse navbar-toggleable-sm" id="myNavbar">
+                <ul class="nav navbar-nav ml-auto"> 
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Classification Models
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="ML_4C.html">Four Wildfire Causes</a>
+                        <a class="dropdown-item" href="ML_3C.html">Three Wildfire Causes</a>
+                        <a class="dropdown-item" href="ML_1C.html">Individual Wildfire Causes</a>
+                      </div>
+                  </li>
+                  <!--li class="nav-item">
+                      <a class="nav-link" href="DataPage.html">Data Description</a>
+                  </li-->
+                </ul>
+            </div>
+
+        </nav>
+
+        <div class="row relative">
+            <div class="col-md-2">
+                <div class="box8">
+                    <img class="img1 displayed" src="Wildfires5.jpg">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="box8">
+                    <img class="img1 displayed" src="Wildfires4.jpg">
+                </div>
+            </div>                 
+            <div class="col-md-4 text-center">
+                <div class="box8">                
+                    <h1>US Wildfires</h1>
+                    <h3>An Analysis of Wildfire Causes</h3>
+                </div>                                                   
+            </div>
+            <div class="col-md-2">
+                <div class="box8">
+                    <img class="img1 displayed" src="Wildfires6.jpg">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="box8">
+                    <img class="img1 displayed" src="Wildfires7.jpg">
+                </div>
+            </div>           
+        </div>         
+
+        <div class="row relative">
+            <div class="col-md-12 text-center">
+                <p class="solid"></p>
+            </div>
+        </div>
+
+
+        <div class="row relative">
+            <div class="myTableauViz">
+                <div class='tableauPlaceholder' id='viz1603381197407' style='position: relative'>
+                    <noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Wi&#47;WildfireAnalysis&#47;Story1&#47;1_rss.png' style='border: none' /></a></noscript>
+                    <object class='tableauViz'  style='display:none;'>
+                        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                        <param name='embed_code_version' value='3' />
+                        <param name='site_root' value='' /><param name='name' value='WildfireAnalysis&#47;Story1' />
+                        <param name='tabs' value='no' />
+                        <param name='toolbar' value='yes' />
+                        <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Wi&#47;WildfireAnalysis&#47;Story1&#47;1.png' />
+                        <param name='animate_transition' value='yes' />
+                        <param name='display_static_image' value='yes' />
+                        <param name='display_spinner' value='yes' />
+                        <param name='display_overlay' value='yes' />
+                        <param name='display_count' value='yes' />
+                        <param name='language' value='en' />
+                    </object>
+                </div>                
+                <script type='text/javascript'>                    var divElement = document.getElementById('viz1603381197407');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='1616px';vizElement.style.height='791px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+            </div>
+        </div>        
+
+    </div>
+    
+</body>
+</html>    
